@@ -6,33 +6,30 @@ public class Executavel {
 		Gasolina gasolina = new Gasolina();
 		Alcool alcool = new Alcool();
 		
-		Carro x6 = new Carro("azul", "BMW", "4TF6K0", 200, 50, 500000, gasolina);
-		Carro ix35 = new Carro("preto", "Hyundai", "BGF578R", 180, 50, 200000, alcool);
+		Carro x6 = new Carro("azul", "BMW", "4TF6K0", 200, 50, 500000, gasolina,false);
 		
-		Moto pcx = new Moto("branca", "Honda", "CAR09L", 150, 35, 20000, gasolina);
+		Caminhao Cargo = new Caminhao("cinza", "Ford", "AS290L", 130, 70, 700000, gasolina, 500, true, false);
+		
+		Moto pcx = new Moto("branca", "Honda", "CAR09L", 150, 35, 20000, gasolina,true);
 		
 		x6.ligar();
+		x6.abastecimento(50);
+		x6.acelerar(140);
+		x6.trocarMarcha(5);
 		x6.acelerar(100);
-		x6.freiar(50);
-		x6.acelerar(200);
-		x6.desligar();
-		
-		ix35.ligar();
-		ix35.acelerar(100);
-		ix35.freiar(50);
-		ix35.acelerar(100);
-		ix35.desligar();
+		x6.exibirDados();
 		
 		pcx.ligar();
-		pcx.acelerar(100);
-		pcx.freiar(50);
-		pcx.acelerar(60);
-		pcx.desligar();
+		pcx.abastecimento(30);
+		pcx.acelerar(180);
 		
-		x6.abastecimento(45);
-		ix35.abastecimento(15);
-
-
+		
+		Cargo.ligar();
+		Cargo.abastecimento(70);
+		Cargo.acelerar(100);
+		Cargo.exibirDados();
+		Cargo.trocarMarcha(6);
+		Cargo.acelerar(200);
 	}
 
 }
